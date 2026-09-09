@@ -31,7 +31,10 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
     static final String INSTANCES_TABLE_NAME = "alarm_instances";
     static final String CATEGORIES_TABLE_NAME = "alarm_categories";
 
-    private static final int DATABASE_VERSION = 32;
+    // Upstream 2.35 uses schema versions 30-32 for categories, task metadata, and DND.
+    // Fork previews reused those versions for combinedDays and repair migrations. Version 33
+    // runs the idempotent checks below against every shipped fork database.
+    private static final int DATABASE_VERSION = 33;
     private static final int MINIMUM_SUPPORTED_VERSION = 15;
 
     public ClockDatabaseHelper(@Nullable Context context) {
@@ -39,7 +42,7 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
     }
 
     private static void createCategoriesTable(@NonNull SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + CATEGORIES_TABLE_NAME + " (" +
+        db.execSQL("CREATE TABLE IF NOT EXISTS " + CATEGORIES_TABLE_NAME + " (" +
             ClockContract.CategoryColumns._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
             ClockContract.CategoryColumns.NAME + " TEXT NOT NULL, " +
             ClockContract.CategoryColumns.SORT_ORDER + " INTEGER NOT NULL DEFAULT 0);");
@@ -80,7 +83,8 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
             ClockContract.AlarmsColumns.CATEGORY_IDS + " TEXT NOT NULL DEFAULT ',0,', " +
             ClockContract.AlarmsColumns.TASK_NAME + " TEXT NOT NULL DEFAULT '', " +
             ClockContract.AlarmsColumns.TASK_URL + " TEXT NOT NULL DEFAULT '', " +
-            ClockContract.AlarmsColumns.DISABLE_DND + " INTEGER NOT NULL DEFAULT 0);");
+            ClockContract.AlarmsColumns.DISABLE_DND + " INTEGER NOT NULL DEFAULT 0, " +
+            ClockContract.AlarmsColumns.COMBINED_DAYS + " TEXT NOT NULL DEFAULT '');");
 
         LogUtils.i("Alarms Table created");
     }
@@ -330,27 +334,61 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
             LogUtils.i("timezone column added for version 29 upgrade.");
         }
 
-        if (oldVersion < 30) {
+        // Fork previews reused schema versions for different columns. Check each column
+        // independently so upgrades from any shipped preview are safe and repeatable.
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.CATEGORY_IDS)) {
             db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
                 ClockContract.AlarmsColumns.CATEGORY_IDS + " TEXT NOT NULL DEFAULT ',0,';");
+            LogUtils.i("categoryIds column repaired.");
+        }
+        createCategoriesTable(db);
 
-            createCategoriesTable(db);
-
-            LogUtils.i("categoryId column and categories table added for version 30 upgrade.");
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.TASK_NAME)) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
+                ClockContract.AlarmsColumns.TASK_NAME + " TEXT DEFAULT '';");
+            LogUtils.i("taskName column added.");
         }
 
-        if (oldVersion < 31) {
-            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " + ClockContract.AlarmsColumns.TASK_NAME + " TEXT DEFAULT '';");
-            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " + ClockContract.AlarmsColumns.TASK_URL + " TEXT DEFAULT '';");
-
-            LogUtils.i("taskName and taskUrl columns added for version 31 upgrade.");
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.TASK_URL)) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
+                ClockContract.AlarmsColumns.TASK_URL + " TEXT DEFAULT '';");
+            LogUtils.i("taskUrl column added.");
         }
 
-        if (oldVersion < 32) {
-            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " + ClockContract.AlarmsColumns.DISABLE_DND
-                + " INTEGER NOT NULL DEFAULT 0;");
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.DISABLE_DND)) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
+                ClockContract.AlarmsColumns.DISABLE_DND + " INTEGER NOT NULL DEFAULT 0;");
+            LogUtils.i("disableDND column added.");
+        }
 
-            LogUtils.i("disableDND column added for version 32 upgrade.");
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.COMBINED_DAYS)) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
+                ClockContract.AlarmsColumns.COMBINED_DAYS + " TEXT NOT NULL DEFAULT '';");
+            LogUtils.i("combinedDays column added.");
+        }
+
+        // Some preview installs advanced the version despite missing the lock column.
+        if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.LOCK)) {
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
+                ClockContract.AlarmsColumns.LOCK + " INTEGER NOT NULL DEFAULT 0;");
+            LogUtils.i("lock column repaired.");
+        }
+    }
+
+    private static boolean columnExists(SQLiteDatabase db, String table, String column) {
+        Cursor cursor = null;
+        try {
+            cursor = db.rawQuery("PRAGMA table_info(" + table + ")", null);
+            while (cursor != null && cursor.moveToNext()) {
+                if (column.equals(cursor.getString(cursor.getColumnIndexOrThrow("name")))) {
+                    return true;
+                }
+            }
+            return false;
+        } finally {
+            if (cursor != null) {
+                cursor.close();
+            }
         }
     }
 

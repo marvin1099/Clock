@@ -234,6 +234,7 @@ public class BackupAndRestoreManager {
             alarmObject.put("taskName", alarm.taskName);
             alarmObject.put("taskUrl", alarm.taskUrl);
             alarmObject.put("disableDND", alarm.disableDND);
+            alarmObject.put("combinedDays", alarm.combinedDays != null ? alarm.combinedDays.toJson() : "");
 
             JSONArray categoryIdsArray = new JSONArray();
             if (alarm.categoryIds != null) {
@@ -536,6 +537,8 @@ public class BackupAndRestoreManager {
             }
         }
 
+        String combinedDaysJson = alarmObject.optString("combinedDays", "");
+
         if (!TextUtils.isEmpty(oldBackgroundImage)) {
             String fileName = new File(oldBackgroundImage).getName();
             final Context safeContext = Utils.getSafeStorageContext(context);
@@ -580,7 +583,7 @@ public class BackupAndRestoreManager {
         restoredAlarm = new Alarm(id, enabled, year, month, day, hour, minutes, vibrate, vibrationPattern, flash,
             Weekdays.fromBits(daysOfWeek), label, syncAlarmByLabel, alarmRingtone, deleteAfterUse, autoSilenceDuration, snoozeDuration,
             missedAlarmRepeatLimit, crescendoDuration, alarmVolume, manualSortOrder, pauseStartDate, pauseEndDate, newBackgroundImage,
-            blurIntensity, mathHardnessLevel, lock, timeZone, categoryIds, taskName, taskUrl, disableDND);
+            blurIntensity, mathHardnessLevel, lock, timeZone, categoryIds, taskName, taskUrl, disableDND, combinedDaysJson);
 
         restoredAlarm.addAlarm(contentResolver);
 
