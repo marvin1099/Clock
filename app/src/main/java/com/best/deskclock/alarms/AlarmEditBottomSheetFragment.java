@@ -50,6 +50,7 @@ import androidx.fragment.app.FragmentManager;
 import com.best.deskclock.DeskClock;
 import com.best.deskclock.R;
 import com.best.deskclock.base.AppExecutors;
+import com.best.deskclock.data.CombinedDays;
 import com.best.deskclock.data.DataModel;
 import com.best.deskclock.data.SettingsDAO;
 import com.best.deskclock.data.Weekdays;
@@ -63,6 +64,7 @@ import com.best.deskclock.dialogfragment.AlarmSnoozeDurationDialogFragment;
 import com.best.deskclock.dialogfragment.AlarmVolumeDialogFragment;
 import com.best.deskclock.dialogfragment.AutoSilenceDurationDialogFragment;
 import com.best.deskclock.dialogfragment.BlurIntensityDialogFragment;
+import com.best.deskclock.dialogfragment.CalendarPickerDialogFragment;
 import com.best.deskclock.dialogfragment.DatePickerDialogFragment;
 import com.best.deskclock.dialogfragment.LabelDialogFragment;
 import com.best.deskclock.dialogfragment.MaterialTimePickerDialogFragment;
@@ -367,6 +369,7 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
         bindDaysOfWeekButtons();
         bindSelectedDate();
         bindPauseAlarm();
+        bindCombinedDays();
         bindLabel();
         bindRingtone();
         bindVibrator();
@@ -559,6 +562,8 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
                     if (!mAlarm.daysOfWeek.isRepeating()) {
                         mAlarm.pauseStartDate = 0;
                         mAlarm.pauseEndDate = 0;
+                        // Clear deselected dates when no weekdays are selected (deselected dates only apply to weekdays)
+                        mAlarm.combinedDays = mAlarm.combinedDays.clearDeselected();
                     }
 
                     if (mAlarm.daysOfWeek.getBits() == mOriginalAlarm.daysOfWeek.getBits()) {
@@ -577,6 +582,7 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
 
                     bindSelectedDate();
                     bindPauseAlarm();
+                    bindCombinedDays();
                     bindDeleteAlarmAfterUse();
                     break;
                 }
@@ -663,6 +669,63 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
 
         mBinding.pauseAlarmNote.setVisibility(isRepeating ? GONE : VISIBLE);
         mBinding.pauseAlarmNote.setOnClickListener(isRepeating ? null : v -> showPauseAlarmNoteDialog());
+    }
+
+    private void bindCombinedDays() {
+        CombinedDays combinedDays = mAlarm.combinedDays;
+        boolean isRepeating = mAlarm.daysOfWeek.isRepeating();
+
+        mBinding.combinedDaysLayout.setEnabled(true);
+        mBinding.combinedDays.setEnabled(true);
+
+        if (combinedDays.isEmpty()) {
+            if (isRepeating) {
+                mBinding.combinedDays.setText(R.string.exclude_dates_title);
+            } else {
+                mBinding.combinedDays.setText(R.string.select_dates_title);
+            }
+            mBinding.cancelCombinedDays.setVisibility(GONE);
+        } else {
+            if (isRepeating && combinedDays.hasDeselectedDates()) {
+                int count = combinedDays.getDeselectedDateCount();
+                mBinding.combinedDays.setText(getString(R.string.dates_excluded_count, count));
+                mBinding.cancelCombinedDays.setVisibility(VISIBLE);
+            } else if (!isRepeating && combinedDays.hasSelectedDates()) {
+                int count = combinedDays.getSelectedDateCount();
+                mBinding.combinedDays.setText(getString(R.string.dates_selected_count, count));
+                mBinding.cancelCombinedDays.setVisibility(VISIBLE);
+            } else {
+                if (isRepeating) {
+                    mBinding.combinedDays.setText(R.string.exclude_dates_title);
+                } else {
+                    mBinding.combinedDays.setText(R.string.select_dates_title);
+                }
+                mBinding.cancelCombinedDays.setVisibility(GONE);
+            }
+        }
+
+        mBinding.combinedDaysLayout.setOnClickListener(v -> {
+            Events.sendAlarmEvent(R.string.action_set_date, R.string.label_deskclock);
+
+            int mode = isRepeating
+                ? CalendarPickerDialogFragment.MODE_DESELECT
+                : CalendarPickerDialogFragment.MODE_SELECT;
+
+            CalendarPickerDialogFragment fragment = CalendarPickerDialogFragment.newInstance(
+                mode,
+                mAlarm.combinedDays,
+                mAlarm.daysOfWeek.getBits()
+            );
+            CalendarPickerDialogFragment.show(getChildFragmentManager(), fragment);
+        });
+
+        mBinding.cancelCombinedDays.setOnClickListener(v -> {
+            mAlarm.combinedDays = mAlarm.combinedDays.clear();
+            bindCombinedDays();
+        });
+
+        mBinding.combinedDaysNote.setVisibility(VISIBLE);
+        mBinding.combinedDaysNote.setOnClickListener(v -> showCombinedDaysNoteDialog());
     }
 
     private void bindLabel() {
@@ -1254,6 +1317,14 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
                 mAlarm.blurIntensity = bundle.getInt(BlurIntensityDialogFragment.RESULT_BLUR_INTENSITY_VALUE);
                 bindBlurIntensity();
             });
+
+        childFragmentManager.setFragmentResultListener(CalendarPickerDialogFragment.REQUEST_KEY, this,
+            (requestKey, bundle) -> {
+                String json = bundle.getString(CalendarPickerDialogFragment.RESULT_DATES_JSON, "");
+                int mode = bundle.getInt(CalendarPickerDialogFragment.RESULT_MODE, CalendarPickerDialogFragment.MODE_SELECT);
+                mAlarm.combinedDays = CombinedDays.fromJson(json);
+                bindCombinedDays();
+            });
     }
 
     /**
@@ -1382,6 +1453,9 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
             mAlarm.pauseStartDate = 0;
             mAlarm.pauseEndDate = 0;
         }
+
+        // Clear combined days when selecting a specific date (they are mutually exclusive)
+        mAlarm.combinedDays = mAlarm.combinedDays.clear();
 
         mAlarm.year = year;
         mAlarm.month = month;
@@ -1619,6 +1693,27 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
                 mShowAutoSilenceNoteDialog = false;
                 mAutoSilenceDuration = null;
             })),
+            CustomDialog.SoftInputMode.NONE
+        );
+
+        mActiveDialog.show();
+    }
+
+    private void showCombinedDaysNoteDialog() {
+        mActiveDialog = CustomDialog.create(
+            requireContext(),
+            null,
+            AppCompatResources.getDrawable(requireContext(), R.drawable.ic_help),
+            getString(R.string.info),
+            getString(R.string.combined_days_info_message),
+            null,
+            getString(android.R.string.ok),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
             CustomDialog.SoftInputMode.NONE
         );
 
