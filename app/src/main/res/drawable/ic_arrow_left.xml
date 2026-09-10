@@ -12,5 +12,5 @@
     android:autoMirrored="true">
     <path
         android:fillColor="?attr/colorOnSurface"
-        android:pathData="M14.71 17.29c.39-.39.39-1.02 0-1.41L10.83 12l3.88-3.88c.39-.39.39-1.02 0-1.41s-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41L13.3 17.3c.38.38 1.02.38 1.41-.01z" />
+        android:pathData="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
 </vector>
