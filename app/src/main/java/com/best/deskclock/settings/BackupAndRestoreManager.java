@@ -234,7 +234,7 @@ public class BackupAndRestoreManager {
             alarmObject.put("taskName", alarm.taskName);
             alarmObject.put("taskUrl", alarm.taskUrl);
             alarmObject.put("disableDND", alarm.disableDND);
-            alarmObject.put("combinedDays", alarm.combinedDays != null ? alarm.combinedDays.toJson() : "");
+            alarmObject.put("combinedDays", alarm.combinedDays.toJson());
 
             JSONArray categoryIdsArray = new JSONArray();
             if (alarm.categoryIds != null) {
