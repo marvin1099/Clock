@@ -987,7 +987,8 @@ public final class AlarmStateManager extends BroadcastReceiver {
                 && alarm.getNextAlarmTime(currentTime).getTimeInMillis() == instance.getAlarmTime().getTimeInMillis();
 
             if (!isCombinedNextOccurrence
-                && (currentTime.before(priorAlarmTime) || currentTime.after(missedTTLTime))) {
+                && ((priorAlarmTime != null && currentTime.before(priorAlarmTime))
+                    || currentTime.after(missedTTLTime))) {
                 final Calendar oldAlarmTime = instance.getAlarmTime();
                 final Calendar newAlarmTime = alarm.getNextAlarmTime(currentTime);
                 final SimpleDateFormat logFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm a", Locale.US);
