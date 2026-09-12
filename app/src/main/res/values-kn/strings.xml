@@ -235,4 +235,8 @@
     <string name="label_default">ಪೂರ್ವನಿಯೋಜಿತ</string>
     <string name="selected">ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ</string>
     <string name="more_options">ಹೆಚ್ಚಿನ ಆಯ್ಕೆಗಳು</string>
+    <string name="dates_overridden_count">%1$d ದಿನಾಂಕಗಳು ಹೊರಗಿಡಲಾಗಿದೆ, %2$d ಸೇರಿಸಲಾಗಿದೆ</string>
+    <string name="dates_excluded_only_count">%d ದಿನಾಂಕಗಳು ಹೊರಗಿಡಲಾಗಿದೆ</string>
+    <string name="dates_added_only_count">%d ದಿನಾಂಕಗಳು ಸೇರಿಸಲಾಗಿದೆ</string>
+    <string name="dialog_close">ಮುಚ್ಚಿ</string>
 </resources>

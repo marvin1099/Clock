@@ -309,4 +309,8 @@
     <string name="display_card_background_title">Amosar fondo das tarxetas</string>
     <string name="display_card_background_summary">Amosar fondo para algúns elementos da aplicación (alarmas, cidades, botón temporizador etc.)</string>
     <string name="settings_language_dutch">Holandés</string>
+    <string name="dates_overridden_count">%1$d datas excluídas, %2$d engadidas</string>
+    <string name="dates_excluded_only_count">%d datas excluídas</string>
+    <string name="dates_added_only_count">%d datas engadidas</string>
+    <string name="dialog_close">Pechar</string>
 </resources>

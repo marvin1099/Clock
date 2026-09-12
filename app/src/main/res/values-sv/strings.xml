@@ -297,4 +297,7 @@
     <string name="minute_default_color_title">Använd standardfärg för minuter</string>
     <string name="date_default_color_title">Använd standardfärg för datum</string>
     <string name="background_default_color_title">Använd standardfärg för bakgrund</string>
+    <string name="dates_overridden_count">%1$d datum exkluderade, %2$d tillagda</string>
+    <string name="dates_excluded_only_count">%d datum exkluderade</string>
+    <string name="dates_added_only_count">%d datum tillagda</string>
 </resources>

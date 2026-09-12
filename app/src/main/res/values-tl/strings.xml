@@ -219,4 +219,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"Piliin kung aling alarm ang idi-dismiss"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"Walang mga gumaganang alarm"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"Na-snooze sa loob ng 10 minuto ang alarm na <xliff:g id="ALARM_TIME">%s</xliff:g>"</string>
+    <string name="dates_overridden_count">%1$d petsa na hindi kasama, %2$d idinagdag</string>
+    <string name="dates_excluded_only_count">%d petsa na hindi kasama</string>
+    <string name="dates_added_only_count">%d petsa na idinagdag</string>
+    <string name="dialog_close">Isara</string>
 </resources>

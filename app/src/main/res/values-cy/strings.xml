@@ -258,4 +258,8 @@
     <string name="alarm_upcoming_channel">Larymau yn dod i fyny</string>
     <string name="stopwatch_channel">Stopwats</string>
     <string name="timer_channel">Amserydd</string>
+    <string name="dates_overridden_count">%1$d o ddyddiadau wedi\'u hepgor, %2$d wedi\'u hychwanegu</string>
+    <string name="dates_excluded_only_count">%d o ddyddiadau wedi\'u hepgor</string>
+    <string name="dates_added_only_count">%d o ddyddiadau wedi\'u hychwanegu</string>
+    <string name="dialog_close">Cau</string>
 </resources>

@@ -721,4 +721,7 @@
     <string name="enable_per_alarm_math_hardness_level_title">Použít vlastní úroveň obtížnost matematiky pro každý budík</string>
     <string name="enable_per_alarm_math_hardness_level_dialog_message">Vlastní úroveň obtížnosti matematiky bude resetována.%s</string>
     <string name="sw_display_milliseconds_title">Zobrazit milisekundy</string>
+    <string name="dates_overridden_count">%1$d dat vynecháno, %2$d přidáno</string>
+    <string name="dates_excluded_only_count">%d dat vynecháno</string>
+    <string name="dates_added_only_count">%d dat přidáno</string>
 </resources>

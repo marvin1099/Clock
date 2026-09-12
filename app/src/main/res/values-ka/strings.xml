@@ -227,4 +227,8 @@
     <string name="alarm_upcoming_channel">მომავალი მაღვიძარა</string>
     <string name="stopwatch_channel">წამზომი</string>
     <string name="timer_channel">უკუმთვლელი</string>
+    <string name="dates_overridden_count">%1$d თარიღი გამორიცხულია, %2$d დამატებულია</string>
+    <string name="dates_excluded_only_count">%d თარიღი გამორიცხულია</string>
+    <string name="dates_added_only_count">%d თარიღი დამატებულია</string>
+    <string name="dialog_close">დახურვა</string>
 </resources>

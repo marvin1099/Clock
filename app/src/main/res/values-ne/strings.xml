@@ -219,4 +219,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"कुन अलार्म खारेज गर्ने हो छान्नुहोस्"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"कुनै बजिरहेका अलार्महरू छैनन्"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> अलार्म १० मिनेटका लागि  स्नुज गरियो"</string>
+    <string name="dates_overridden_count">%1$d मिति बहिष्कृत, %2$d थपियो</string>
+    <string name="dates_excluded_only_count">%d मिति बहिष्कृत</string>
+    <string name="dates_added_only_count">%d मिति थपियो</string>
+    <string name="dialog_close">बन्द गर्नुहोस्</string>
 </resources>

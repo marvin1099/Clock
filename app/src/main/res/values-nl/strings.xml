@@ -707,4 +707,7 @@
     <string name="enable_per_alarm_math_hardness_level_title">Aangepaste moeilijkheidsgraad voor iedere wekker</string>
     <string name="enable_per_alarm_math_hardness_level_dialog_message">Aangepaste moeilijkheidsgraden worden teruggezet.%s</string>
     <string name="sw_display_milliseconds_title">Milliseconden weergeven</string>
+    <string name="dates_overridden_count">%1$d datums uitgesloten, %2$d toegevoegd</string>
+    <string name="dates_excluded_only_count">%d datums uitgesloten</string>
+    <string name="dates_added_only_count">%d datums toegevoegd</string>
 </resources>

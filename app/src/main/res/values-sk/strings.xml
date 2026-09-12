@@ -238,4 +238,8 @@
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"Budík na <xliff:g id="ALARM_TIME">%s</xliff:g> bol odložený o 10 minút"</string>
     <string name="flip_action_title">Akcia pri otočení telefónu</string>
     <string name="shake_action_title">Akcie pri zatrasení telefónom</string>
+    <string name="dates_overridden_count">%1$d dní vylúčených, %2$d pridaných</string>
+    <string name="dates_excluded_only_count">%d dní vylúčených</string>
+    <string name="dates_added_only_count">%d dní pridaných</string>
+    <string name="dialog_close">Zavrieť</string>
 </resources>

@@ -270,4 +270,8 @@
     <string name="pause_alarm_range">Dừng trong: %1$s</string>
     <string name="label_new_font">Phông chữ mới</string>
     <string name="button_tip_title">Nhấn giữ nút \"+\" để thêm thư mục</string>
+    <string name="dates_overridden_count">Loại trừ %1$d ngày, thêm %2$d ngày</string>
+    <string name="dates_excluded_only_count">Loại trừ %d ngày</string>
+    <string name="dates_added_only_count">Thêm %d ngày</string>
+    <string name="dialog_close">Đóng</string>
 </resources>

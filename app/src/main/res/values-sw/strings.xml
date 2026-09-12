@@ -219,4 +219,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"Chagua kengele utakayoondoa"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"Hakuna kengele zinazolia"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"Kengele ya <xliff:g id="ALARM_TIME">%s</xliff:g> imeahirishwa kwa dakika 10"</string>
+    <string name="dates_overridden_count">%1$d tarehe zimetengwa, %2$d zimeongezwa</string>
+    <string name="dates_excluded_only_count">%d tarehe zimetengwa</string>
+    <string name="dates_added_only_count">%d tarehe zimeongezwa</string>
+    <string name="dialog_close">Funga</string>
 </resources>

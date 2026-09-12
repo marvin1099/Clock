@@ -3,7 +3,8 @@
     Copyright (C) 2016 The Android Open Source Project
     modified
     SPDX-License-Identifier: Apache-2.0 AND GPL-3.0-only
---><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
     <string name="app_label" msgid="6674495003718166674">"Relógio"</string>
     <string name="default_label" msgid="5590025289805630372">"Alarme"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Vibrar"</string>
@@ -276,7 +277,7 @@
     <string name="license">Licença de código aberto</string>
     <string name="license_dialog_message">Leia a licença:\n\n%s</string>
     <string name="gnu_gpl">Licença Pública Geral v3.0 GNU</string>
-    <string name="app_slogan">Relógio FOSS 100%, baseado no AOSP</string>
+    <string name="app_slogan" tools:ignore="StringFormatInvalid">Relógio FOSS 100%, baseado no AOSP</string>
     <string name="reset_settings_title">Reiniciar as definições</string>
     <string name="reset_settings_message">Deseja reiniciar as definições da aplicação?</string>
     <string name="restart_app_dialog_title_for_reset">Reinício concluído</string>
@@ -498,4 +499,7 @@
     <string name="settings_language_bulgarian">Búlgaro</string>
     <string name="settings_language_tamil">Tâmil</string>
     <string name="settings_vibration_summary">Apenas alguns botões na interface são afetados (ex: o cronómetro botão de reproduzir/pausar ou interruptores)</string>
+    <string name="dates_overridden_count">%1$d datas excluídas, %2$d adicionadas</string>
+    <string name="dates_excluded_only_count">%d datas excluídas</string>
+    <string name="dates_added_only_count">%d datas adicionadas</string>
 </resources>

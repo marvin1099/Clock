@@ -3,7 +3,8 @@
     Copyright (C) 2016 The Android Open Source Project
     modified
     SPDX-License-Identifier: Apache-2.0 AND GPL-3.0-only
---><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
     <string name="app_label" msgid="6674495003718166674">"Kell"</string>
     <string name="default_label" msgid="5590025289805630372">"Äratus"</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"Värin"</string>
@@ -247,7 +248,7 @@
     <string name="alarm_notification_reminder_title">Teavituse meeldetuletus</string>
     <string name="enable_alarm_vibrations_by_default_setting_title">Äratuse käivitamisel lülita vibreerimine sisse</string>
     <string name="timer_add_custom_time">+ %s</string>
-    <string name="app_slogan">AOSP-l põhinev, 100% avatud lähtekoodiga kell</string>
+    <string name="app_slogan" tools:ignore="StringFormatInvalid">AOSP-l põhinev, 100% avatud lähtekoodiga kell</string>
     <string name="display_background_border_summary">See eelistus võimaldab mõnede rakenduse elementide (äratused, linnad, taimeri nupud, jne) puhul kuvada taustu äärejoontega</string>
     <string name="display_background_border_title">Kuva taustade äärejooni</string>
     <string name="settings_vibration_title">Kasuta vibreerimist/värinat</string>
@@ -705,4 +706,7 @@
     <string name="math_hardness_level_normal">Tavaline</string>
     <string name="math_hardness_level_hard">Raske</string>
     <string name="sw_display_milliseconds_title">Kuva millisekundeid</string>
+    <string name="dates_overridden_count">%1$d kuupäeva välja jäetud, %2$d lisatud</string>
+    <string name="dates_excluded_only_count">%d kuupäeva välja jäetud</string>
+    <string name="dates_added_only_count">%d kuupäeva lisatud</string>
 </resources>

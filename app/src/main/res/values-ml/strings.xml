@@ -219,4 +219,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"ഡിസ്മിസ് ചെയ്യേണ്ട അലാറം തിരഞ്ഞെടുക്കുക"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"ശബ്ദമുണ്ടാക്കുന്ന അലാറമുകളൊന്നുമില്ല"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> അലാറം 10 മിനിറ്റ് സ്നൂസ് ചെയ്തു"</string>
+    <string name="dates_overridden_count">%1$d തീയതികൾ ഒഴിവാക്കി, %2$d ചേർത്തു</string>
+    <string name="dates_excluded_only_count">%d തീയതികൾ ഒഴിവാക്കി</string>
+    <string name="dates_added_only_count">%d തീയതികൾ ചേർത്തു</string>
+    <string name="dialog_close">അടയ്ക്കുക</string>
 </resources>

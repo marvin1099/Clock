@@ -676,4 +676,7 @@
     <string name="timer_missed_channel">錯過的計時器</string>
     <string name="toast_message_backup_error">備份失敗</string>
     <string name="toast_message_restore_error">還原失敗</string>
+    <string name="dates_overridden_count">已排除 %1$d 日，已加入 %2$d 日</string>
+    <string name="dates_excluded_only_count">已排除 %d 日</string>
+    <string name="dates_added_only_count">已加入 %d 日</string>
 </resources>

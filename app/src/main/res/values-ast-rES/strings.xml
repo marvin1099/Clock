@@ -192,4 +192,8 @@
     <string name="alarm_is_snoozed">L\'alarma <xliff:g example="14:20" id="alarm_time">%s</xliff:g> pospúsose por diez minutos</string>
     <string name="flip_action_title">Aición al voltiar el preséu</string>
     <string name="shake_action_title">Aición al ximelgar el preséu</string>
+    <string name="dates_overridden_count">%1$d feches escluyíes, %2$d añadíes</string>
+    <string name="dates_excluded_only_count">%d feches escluyíes</string>
+    <string name="dates_added_only_count">%d feches añadíes</string>
+    <string name="dialog_close">Zarrar</string>
 </resources>

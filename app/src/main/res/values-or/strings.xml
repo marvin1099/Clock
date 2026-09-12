@@ -217,4 +217,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"କେଉଁ ଆଲାର୍ମକୁ ଖାରଜ କରିବେ, ତାହା ବାଛନ୍ତୁ"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"କୌଣସି ସକ୍ରିୟ ଆଲାର୍ମ ନାହିଁ"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g>କୁ ଆଲାର୍ମ 10 ମିନିଟ୍ ପାଇଁ ସ୍ନୁଜ୍ କଲା"</string>
+    <string name="dates_overridden_count">%1$d ତାରିଖ ବାଦ ଦିଆଗଲା, %2$d ଯୋଡ଼ାଗଲା</string>
+    <string name="dates_excluded_only_count">%d ତାରିଖ ବାଦ ଦିଆଗଲା</string>
+    <string name="dates_added_only_count">%d ତାରିଖ ଯୋଡ଼ାଗଲା</string>
+    <string name="dialog_close">ବନ୍ଦ କରନ୍ତୁ</string>
 </resources>

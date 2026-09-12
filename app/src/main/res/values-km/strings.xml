@@ -212,4 +212,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"រើសម៉ោងរោទិ៍ដែលត្រូវលុប"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"គ្មានម៉ោងរោទិ៍បន្លឺឡើងទេ"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"បានផ្អាកម៉ោងរោទិ៍ <xliff:g id="ALARM_TIME">%s</xliff:g> រយៈពេល 10 នាទី"</string>
+    <string name="dates_overridden_count">%1$d កាលបរិច្ឆេទត្រូវបានដកចេញ %2$d ត្រូវបានបន្ថែម</string>
+    <string name="dates_excluded_only_count">%d កាលបរិច្ឆេទបានដកចេញ</string>
+    <string name="dates_added_only_count">%d កាលបរិច្ឆេទបានបន្ថែម</string>
+    <string name="dialog_close">បិទ</string>
 </resources>

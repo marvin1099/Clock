@@ -219,4 +219,8 @@
     <string name="pick_alarm_to_dismiss" msgid="5408769235866082896">"Bekor qilinishi kerak bo‘lgan signalni tanlang"</string>
     <string name="no_firing_alarms" msgid="4986161963178722289">"Hech qanday faol signal yo‘q"</string>
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"<xliff:g id="ALARM_TIME">%s</xliff:g> dagi signal 10 daqiqa surildi"</string>
+    <string name="dates_overridden_count">%1$d sana chiqarildi, %2$d qo\'shildi</string>
+    <string name="dates_excluded_only_count">%d sana chiqarildi</string>
+    <string name="dates_added_only_count">%d sana qo\'shildi</string>
+    <string name="dialog_close">Yopish</string>
 </resources>

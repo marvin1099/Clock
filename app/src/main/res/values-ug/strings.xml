@@ -89,4 +89,8 @@
     <string name="world_day_of_week_label">/ <xliff:g id="LABEL">%s</xliff:g></string>
     <string name="next_alarm_description">كېيىنكى قوڭغۇراق: <xliff:g id="ALARM_TIME">%s</xliff:g></string>
     <string name="no_alarms">قوڭغۇراقلىق سائەت يوق</string>
+    <string name="dates_overridden_count">%1$d چېسلا چىقىرىۋېتىلدى، %2$d قوشۇلدى</string>
+    <string name="dates_excluded_only_count">%d چېسلا چىقىرىۋېتىلدى</string>
+    <string name="dates_added_only_count">%d چېسلا قوشۇلدى</string>
+    <string name="dialog_close">تاقاش</string>
 </resources>

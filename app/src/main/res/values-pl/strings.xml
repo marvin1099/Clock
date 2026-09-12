@@ -721,4 +721,7 @@
     <string name="enable_per_alarm_math_hardness_level_title">Użyj niestandardowy poziom trudności dla każdego alarmu</string>
     <string name="enable_per_alarm_math_hardness_level_dialog_message">Niestandardowe poziomy trudności zostaną zresetowane.%s</string>
     <string name="sw_display_milliseconds_title">Wyświetl milisekundy</string>
+    <string name="dates_overridden_count">%1$d dat wykluczono, %2$d dodano</string>
+    <string name="dates_excluded_only_count">%d dat wykluczono</string>
+    <string name="dates_added_only_count">%d dat dodano</string>
 </resources>

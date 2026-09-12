@@ -3,7 +3,8 @@
     Copyright (C) 2016 The Android Open Source Project
     modified
     SPDX-License-Identifier: Apache-2.0 AND GPL-3.0-only
---><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+--><resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"
+    xmlns:tools="http://schemas.android.com/tools">
     <string name="app_label" msgid="6674495003718166674">"ساعت"</string>
     <string name="default_label" msgid="5590025289805630372">هشدار</string>
     <string name="alarm_vibrate" msgid="3476686921490362230">"لرزش"</string>
@@ -28,7 +29,7 @@
     <string name="alarm_alert_snoozed_text" msgid="7064642998528766113">"به تعویق افتاده"</string>
     <string name="alarm_alert_off_text" msgid="4472073417593915002">"هشدار خاموش"</string>
     <string name="alarm_alert_snooze_text" msgid="1774416052207651584">"تعویق"</string>
-    <plurals name="alarm_alert_snooze_set" formatted="false" msgid="3212729193036041768">
+    <plurals name="alarm_alert_snooze_set" formatted="false" msgid="3212729193036041768" tools:ignore="ImpliedQuantity">
         <item quantity="one">تعویق به مدت ۱ دقیقه.</item>
         <item quantity="other">تعویق به مدت <xliff:g id="minutes">%d</xliff:g> دقیقه.</item>
     </plurals>
@@ -54,27 +55,27 @@
     <string name="alarm_confirmation_toast_6">"هشدار برای <xliff:g id="DAYS">%1$s</xliff:g> و <xliff:g id="MINUTES">%3$s</xliff:g> دیگر از حالا تنظیم شد."</string>
     <string name="alarm_confirmation_toast_7">"هشدار برای <xliff:g id="HOURS">%2$s</xliff:g> و <xliff:g id="MINUTES">%3$s</xliff:g> دیگر از حالا تنظیم شد."</string>
     <string name="alarm_confirmation_toast_8">"هشدار برای <xliff:g id="DAYS">%1$s</xliff:g> و <xliff:g id="HOURS">%2$s</xliff:g> و <xliff:g id="MINUTES">%3$s</xliff:g> دیگر از حالا تنظیم شد."</string>
-    <plurals name="days" formatted="false" msgid="3706846447285206235">
+    <plurals name="days" formatted="false" msgid="3706846447285206235" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ روز</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> روز</item>
     </plurals>
-    <plurals name="hours" formatted="false" msgid="3871283109767171655">
+    <plurals name="hours" formatted="false" msgid="3871283109767171655" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ ساعت</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> ساعت</item>
     </plurals>
-    <plurals name="hours_short" formatted="false" msgid="3709250715691092925">
+    <plurals name="hours_short" formatted="false" msgid="3709250715691092925" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ ساعت</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> ساعت</item>
     </plurals>
-    <plurals name="minutes" formatted="false" msgid="5484431721696058697">
+    <plurals name="minutes" formatted="false" msgid="5484431721696058697" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ دقیقه</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> دقیقه</item>
     </plurals>
-    <plurals name="minutes_short" formatted="false" msgid="6397328304369080233">
+    <plurals name="minutes_short" formatted="false" msgid="6397328304369080233" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ دقیقه</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> دقیقه</item>
     </plurals>
-    <plurals name="seconds" formatted="false" msgid="670343577734266047">
+    <plurals name="seconds" formatted="false" msgid="670343577734266047" tools:ignore="ImpliedQuantity">
         <item quantity="one">۱ ثانیه</item>
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> ثانیه</item>
     </plurals>
@@ -207,7 +208,7 @@
     <string name="alarm_is_dismissed" msgid="5509897230565826642">"زنگ هشدار <xliff:g id="ALARM_TIME">%s</xliff:g> خاموش شد"</string>
     <string name="alarm_is_set" msgid="5503226382620011088">"هشدار برای <xliff:g id="ALARM_TIME">%s</xliff:g> تنظیم می‌شود"</string>
     <string name="timer_created" msgid="4381027137335885547">"تایمر ایجاد شد"</string>
-    <plurals name="expired_timers_dismissed" formatted="false" msgid="1294953410988488149">
+    <plurals name="expired_timers_dismissed" formatted="false" msgid="1294953410988488149" tools:ignore="ImpliedQuantity">
         <item quantity="one">تایمر رد شد</item>
         <item quantity="other"><xliff:g example="5" id="number">%d</xliff:g> تایمر رد شد</item>
     </plurals>
@@ -649,7 +650,7 @@
     <string name="first_launch_version">نسخه %s</string>
     <string name="first_launch_main_feature_title">ویژگی‌های اصلی</string>
     <string name="first_launch_main_feature_message">◄ تم روشن، تیره یا سیستمی؛ &lt;br&gt; &lt;br&gt; ◄ محافظ صفحه قابل تنظیم؛ &lt;br&gt; &lt;br&gt; ◄ ویجت‌های قابل تنظیم؛ &lt;br&gt; &lt;br&gt; ◄ پشتیبانی از کاشی‌ها در تنظیمات سریع (برای اندروید ۷+)؛ &lt;br&gt; &lt;br&gt; ◄ پشتیبان‌گیری و بازیابی داده‌های برنامه (به جز آهنگ‌های زنگ سفارشی)؛ &lt;br&gt; &lt;br&gt; ◄ طراحی متریال و رنگ‌های پویا؛ &lt;br&gt; &lt;br&gt; ◄ تنظیم زنگ‌های هشدار برای یک تاریخ خاص؛ &lt;br&gt; &lt;br&gt; ◄ کشیدن برای حذف یک زنگ هشدار؛ &lt;br&gt; &lt;br&gt; ◄ کپی کردن یک زنگ هشدار؛ &lt;br&gt; &lt;br&gt; ◄ عملکرد برگرداندن و تکان دادن برای رد/به تعویق انداختن زنگ هشدار؛ &lt;br&gt; &lt;br&gt; ◄ خاموش/به تعویق انداختن زنگ هشدار با دکمه پاور یا دکمه‌های صدا؛ &lt;br&gt; &lt;br&gt; ◄ %s</string>
-    <string name="first_launch_main_feature_link">... و خیلی بیشتر!</string>
+    <string name="first_launch_main_feature_link">… و خیلی بیشتر!</string>
     <string name="first_launch_important_info_message">برای اطمینان از عملکرد صحیح برنامه، &lt;b&gt;برخی از تنظیمات دستگاه شما باید تغییر کند:&lt;/b&gt; &lt;br&gt; &lt;br&gt; • &lt;b&gt;بهینه‌سازی باتری؛&lt;/b&gt; &lt;br&gt; &lt;br&gt; • &lt;b&gt;اعلان‌ها؛&lt;/b&gt; &lt;br&gt; &lt;br&gt; %s &lt;i&gt;بسته به نسخه اندروید دستگاه شما، برخی از این تنظیمات از قبل بهینه شده‌اند (مثلاً اعلان‌ها).&lt;/i&gt; &lt;br&gt; &lt;br&gt; می‌توانید آنها را اکنون یا بعداً در تنظیمات مدیریت مجوزها تغییر دهید:</string>
     <string name="first_launch_important_info_message_for_SDK34">• &lt;b&gt;اعلان‌های تمام صفحه؛&lt;/b&gt; &lt;br&gt; &lt;br&gt;</string>
     <string name="first_launch_dialog_message">آیا مطمئن هستید که می‌خواهید از برنامه خارج شوید؟</string>
@@ -660,4 +661,7 @@
     <string name="toast_message_for_backup">پشتیبان‌گیری کامل شد</string>
     <string name="toast_message_backup_error">پشتیبان‌گیری ناموفق بود</string>
     <string name="toast_message_restore_error">بازیابی ناموفق بود</string>
+    <string name="dates_overridden_count">%1$d تاریخ حذف‌شده، %2$d اضافه‌شده</string>
+    <string name="dates_excluded_only_count">%d تاریخ حذف‌شده</string>
+    <string name="dates_added_only_count">%d تاریخ اضافه‌شده</string>
 </resources>

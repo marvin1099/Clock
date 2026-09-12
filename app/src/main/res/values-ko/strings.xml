@@ -554,4 +554,7 @@
     <string name="display_settings_title">디스플레이 설정</string>
     <string name="settings_vibration_disabled_summary">기기 설정에서 진동이 꺼져 있습니다</string>
     <string name="settings_tab_animation_title">탭 전환 시 애니메이션</string>
+    <string name="dates_overridden_count">%1$d개 날짜 제외됨, %2$d개 추가됨</string>
+    <string name="dates_excluded_only_count">%d개 날짜 제외됨</string>
+    <string name="dates_added_only_count">%d개 날짜 추가됨</string>
 </resources>

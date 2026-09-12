@@ -228,4 +228,8 @@
     <string name="alarm_upcoming_channel">Yaxınlaşan zəngli saatlar</string>
     <string name="stopwatch_channel">Saniyəölçən</string>
     <string name="timer_channel">Vaxtölçən</string>
+    <string name="dates_overridden_count">%1$d tarix istisna edilib, %2$d əlavə edilib</string>
+    <string name="dates_excluded_only_count">%d tarix istisna edilib</string>
+    <string name="dates_added_only_count">%d tarix əlavə edilib</string>
+    <string name="dialog_close">Bağla</string>
 </resources>

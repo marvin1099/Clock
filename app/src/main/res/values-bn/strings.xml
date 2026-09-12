@@ -231,4 +231,8 @@
     <string name="alarm_label_box_title">অ্যালার্মের নাম</string>
     <string name="sync_alarm_by_label_title">একই নামের আলার্ম সিঙ্ক্রোনাইজ করুন</string>
     <string name="label_default">ডিফল্ট</string>
+    <string name="dates_overridden_count">%1$dটি তারিখ বাদ, %2$dটি যোগ</string>
+    <string name="dates_excluded_only_count">%dটি তারিখ বাদ</string>
+    <string name="dates_added_only_count">%dটি তারিখ যোগ</string>
+    <string name="dialog_close">বন্ধ</string>
 </resources>

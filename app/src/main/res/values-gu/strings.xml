@@ -296,4 +296,7 @@
     <string name="notifications_dialog_title">સૂચનાઓ</string>
     <string name="show_lockscreen_dialog_title">લોકસ્ક્રીન પર દેખાડો</string>
     <string name="FSN_dialog_title">પૂર્ણ સ્ક્રીન સૂચનાઓ</string>
+    <string name="dates_overridden_count">%1$d તારીખો બાકાત, %2$d ઉમેરાઈ</string>
+    <string name="dates_excluded_only_count">%d તારીખો બાકાત</string>
+    <string name="dates_added_only_count">%d તારીખો ઉમેરાઈ</string>
 </resources>

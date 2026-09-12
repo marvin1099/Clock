@@ -224,4 +224,8 @@
     <string name="delay_picker_dialog_title">Alarm om…</string>
     <string name="label_new_image">Nytt bilde</string>
     <string name="label_hours">Timer</string>
+    <string name="dates_overridden_count">%1$d datoer ekskludert, %2$d lagt til</string>
+    <string name="dates_excluded_only_count">%d datoer ekskludert</string>
+    <string name="dates_added_only_count">%d datoer lagt til</string>
+    <string name="dialog_close">Lukk</string>
 </resources>

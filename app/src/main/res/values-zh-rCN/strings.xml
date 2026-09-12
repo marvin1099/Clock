@@ -678,4 +678,7 @@
     <string name="enable_per_timer_vibration_pattern_title">为每个定时器使用自定义振动模式</string>
     <string name="timer_headphones_button_action_title">使用耳机播放/暂停按钮重置已结束的定时器</string>
     <string name="turn_on_back_flash_for_expired_timer_title">定时器结束时开启后置闪光灯</string>
+    <string name="dates_overridden_count">排除 %1$d 天，添加 %2$d 天</string>
+    <string name="dates_excluded_only_count">排除 %d 天</string>
+    <string name="dates_added_only_count">添加 %d 天</string>
 </resources>

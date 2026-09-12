@@ -661,4 +661,7 @@
     <string name="display_timer_end_time_title">Zamanlayıcının bitiş zamanını görüntüle</string>
     <string name="timer_missed_channel">Kaçırılan zamanlayıcılar</string>
     <string name="settings_language_hebrew">İbranice</string>
+    <string name="dates_overridden_count">%1$d tarih hariç, %2$d eklendi</string>
+    <string name="dates_excluded_only_count">%d tarih hariç</string>
+    <string name="dates_added_only_count">%d tarih eklendi</string>
 </resources>

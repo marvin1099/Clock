@@ -222,4 +222,8 @@
     <string name="alarm_is_snoozed" msgid="7044644119744928846">"Alarmi në <xliff:g id="ALARM_TIME">%s</xliff:g> u shty për 10 minuta"</string>
     <string name="flip_action_title">Veprimi i kthimit së paisjes</string>
     <string name="shake_action_title">Veprimi i tundjes së paisjes</string>
+    <string name="dates_overridden_count">%1$d data të përjashtuara, %2$d të shtuara</string>
+    <string name="dates_excluded_only_count">%d data të përjashtuara</string>
+    <string name="dates_added_only_count">%d data të shtuara</string>
+    <string name="dialog_close">Mbyll</string>
 </resources>

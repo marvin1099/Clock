@@ -311,4 +311,7 @@
 \n
 \nRecomandăm să incluzi această aplicație în lista albă din optimizările bateriei.</string>
     <string name="alarm_flash">Flash</string>
+    <string name="dates_overridden_count">%1$d date excluse, %2$d adăugate</string>
+    <string name="dates_excluded_only_count">%d date excluse</string>
+    <string name="dates_added_only_count">%d date adăugate</string>
 </resources>

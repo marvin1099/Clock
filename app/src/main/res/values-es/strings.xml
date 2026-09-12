@@ -712,4 +712,7 @@
     <string name="enable_per_alarm_math_hardness_level_dialog_message">Se restablecerán los niveles de dificultad personalizados de matemáticas.%s</string>
     <string name="sw_display_milliseconds_title">Mostrar milisegundos</string>
     <string name="auto_silence_info_message">\"Silenciar después de\" establecido en \"%s\". \n\nDesactiva el nivel de dificultad matemática para acceder a esta función.</string>
+    <string name="dates_overridden_count">%1$d fechas excluidas, %2$d añadidas</string>
+    <string name="dates_excluded_only_count">%d fechas excluidas</string>
+    <string name="dates_added_only_count">%d fechas añadidas</string>
 </resources>
