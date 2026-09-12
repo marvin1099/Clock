@@ -743,4 +743,7 @@
         <item quantity="other"><xliff:g example="7" id="number">%s</xliff:g> d</item>
     </plurals>
     <string name="display_enabled_alarm_badge_title">Kenmerk weergeven als wekkers zijn ingeschakeld</string>
+    <string name="dates_overridden_count">%1$d datums uitgesloten, %2$d toegevoegd</string>
+    <string name="dates_excluded_only_count">%d datums uitgesloten</string>
+    <string name="dates_added_only_count">%d datums toegevoegd</string>
 </resources>
