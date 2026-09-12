@@ -748,4 +748,7 @@
     <string name="default_time_to_remove_to_timer_title">Duración predeterminada a restar</string>
     <string name="display_compact_timers_summary">Ahorra espacio en pantalla, pero muestra un máximo de 3 botones.\n\nSi el botón \"Reproducir/Pausa\" se oculta para mostrar los botones de tiempo personalizados, toca la cuenta atrás para pausar</string>
     <string name="display_timer_delete_button_title">Mostrar el botón \"Eliminar\" en la tarjeta del temporizador</string>
+    <string name="dates_overridden_count">%1$d fechas excluidas, %2$d añadidas</string>
+    <string name="dates_excluded_only_count">%d fechas excluidas</string>
+    <string name="dates_added_only_count">%d fechas añadidas</string>
 </resources>

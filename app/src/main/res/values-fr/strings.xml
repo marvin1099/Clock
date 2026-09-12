@@ -756,4 +756,7 @@
     <string name="default_time_to_remove_to_timer_title">Durée par défaut à soustraire aux minuteurs</string>
     <string name="display_compact_timers_summary">Économise de l\'espace à l\'écran, mais affiche 3 boutons maximum.\n\nSi le bouton \"Lecture/Pause\" est masqué pour afficher les deux boutons de temps personnalisés, touchez le décompte pour mettre en pause</string>
     <string name="display_timer_delete_button_title">Afficher le bouton \"Supprimer\" sur la carte du minuteur</string>
+    <string name="dates_overridden_count">%1$d dates exclues, %2$d ajoutées</string>
+    <string name="dates_excluded_only_count">%d dates exclues</string>
+    <string name="dates_added_only_count">%d dates ajoutées</string>
 </resources>
