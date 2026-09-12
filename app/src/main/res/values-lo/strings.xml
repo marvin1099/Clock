@@ -678,4 +678,7 @@
     <string name="settings_language_swedish">ຊູແອັດ</string>
     <string name="settings_language_laotian">ລາວ</string>
     <string name="settings_language_persian">ພາສາເປີເຊຍ</string>
+    <string name="dates_overridden_count">%1$d ວັນທີຖືກຍົກເວັ້ນ, %2$d ຖືກເພີ່ມ</string>
+    <string name="dates_excluded_only_count">%d ວັນທີຖືກຍົກເວັ້ນ</string>
+    <string name="dates_added_only_count">%d ວັນທີຖືກເພີ່ມ</string>
 </resources>

@@ -662,4 +662,7 @@
     <string name="settings_language_swedish">سوئدی</string>
     <string name="settings_language_laotian">لائوسی</string>
     <string name="settings_language_persian">فارسی</string>
+    <string name="dates_overridden_count">%1$d تاریخ حذف‌شده، %2$d اضافه‌شده</string>
+    <string name="dates_excluded_only_count">%d تاریخ حذف‌شده</string>
+    <string name="dates_added_only_count">%d تاریخ اضافه‌شده</string>
 </resources>

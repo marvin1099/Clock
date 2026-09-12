@@ -725,4 +725,7 @@
     <string name="central_fab_size_title">Taille du bouton d\'action flottant central</string>
     <string name="side_fab_size_title">Taille des boutons d\'action flottants latéraux</string>
     <string name="enable_city_flag_title">Afficher les drapeaux des pays</string>
+    <string name="dates_overridden_count">%1$d dates exclues, %2$d ajoutées</string>
+    <string name="dates_excluded_only_count">%d dates exclues</string>
+    <string name="dates_added_only_count">%d dates ajoutées</string>
 </resources>

@@ -606,4 +606,7 @@
     <string name="alarm_minutes_warning_box_text">0분에서 59분까지의 값 입력</string>
     <string name="timer_end_time_label">종료 시각: <xliff:g example="8:30 a.m." id="END_TIME">^1</xliff:g></string>
     <string name="add_time_button_title">\"시간 추가\" 버튼</string>
+    <string name="dates_overridden_count">%1$d개 날짜 제외됨, %2$d개 추가됨</string>
+    <string name="dates_excluded_only_count">%d개 날짜 제외됨</string>
+    <string name="dates_added_only_count">%d개 날짜 추가됨</string>
 </resources>

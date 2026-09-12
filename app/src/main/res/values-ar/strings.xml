@@ -715,4 +715,7 @@
     <string name="settings_language_swedish">سويدي</string>
     <string name="settings_language_laotian">لاوسي</string>
     <string name="settings_language_persian">الفارسية</string>
+    <string name="dates_overridden_count">%1$d تواريخ مستثناة، %2$d مضافة</string>
+    <string name="dates_excluded_only_count">%d تواريخ مستثناة</string>
+    <string name="dates_added_only_count">%d تواريخ مضافة</string>
 </resources>
