@@ -700,4 +700,7 @@
     <string name="invert_timer_button_positions_title">החלפה בין מיקומי הכפתורים של הטיימר</string>
     <string name="timer_headphones_button_action_title">איפוס הטיימרים שהסתיימו בעזרת הכפתור ניגון/השהיה שבאוזניות</string>
     <string name="timer_power_button_action_title">איפוס הטיימרים שהסתיימו בעזרת כפתור ההפעלה</string>
+    <string name="dates_overridden_count">%1$d תאריכים לא נכללים, %2$d נוספו</string>
+    <string name="dates_excluded_only_count">%d תאריכים לא נכללים</string>
+    <string name="dates_added_only_count">%d תאריכים נוספים</string>
 </resources>
