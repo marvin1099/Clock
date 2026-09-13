@@ -3,8 +3,27 @@
 **Clock** is a customizable, privacy‑first, open-source clock app inspired by AOSP Clock.  
 It combines modern design, powerful features, and transparency — giving you full control over your time.
 
+# 🍴 This fork
+
+This fork of **Clock** builds on the original project and adds a **combined‑days alarm system**
+with an inline calendar. Every original feature is preserved.
+
+The most visible additions:
+
+* **Combined‑days alarms**: schedule an alarm for weekdays *and* specific calendar dates in one
+  rule (e.g. *"every Monday, plus on the 1st and 15th of the month"*);
+* **Inline calendar**: manage recurring dates directly in the alarm editor instead of a cluttered list;
+* **Per‑day control**: jump to, toggle, add, or remove single dates with one tap, and dismiss
+  individual occurrences without deleting the rule;
+* **Next‑occurrence info**: the alarm list shows the next firing date, including *"Today" / "Tomorrow"* labels;
+* **Polished date picker**: the date wheels always stay clamped to today and never offer ghost dates.
+
+The unmodified upstream project stays available on the
+[`original`](https://github.com/marvin1099/Clock/tree/original) branch.
+
 # 📑 Table of Contents
 
+- [This fork](#-this-fork)
 - [Download](#-download)
 - [Features](#-features)
 - [Common Issues](#-common-issues)
@@ -15,18 +34,21 @@ It combines modern design, powerful features, and transparency — giving you fu
 
 # 📥 Download
 
-[<img src="/images/badge_github.png" alt="Get it on GitHub" height="80">](https://github.com/BlackyHawky/Clock/releases)
-[<img src="/images/badge_f-droid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/com.best.deskclock/)
-[<img src="/images/badge_izzy_on_droid.png" alt="Get it on IzzyOnDroid" height="80">](https://apt.izzysoft.de/fdroid/index/apk/com.best.deskclock/)
-[<img src="/images/badge_obtainium.png" alt="Get it on Obtainium" height="80">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/BlackyHawky/Clock/releases)
+[<img src="/images/badge_github.png" alt="Download from GitHub Releases" height="80">](https://github.com/marvin1099/Clock/releases)
+[<img src="/images/badge_obtainium.png" alt="Get it on Obtainium" height="80">](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/marvin1099/Clock/releases)
 
 > [!NOTE]  
-> **Build variants:**
-> - **Release:** Stable versions recommended for everyday use (available on all platforms above).
-> - **Nightly:** Experimental builds with the latest changes, may be unstable (available on GitHub, and also on Obtainium if you enable _"Include prereleases"_).
-> - **Debug:** Developer-oriented builds with extra logging and diagnostics (available only on GitHub).
+> **Build variants** (Release, Nightly, and Debug are published with every release):
+> - **Release:** Stable build for everyday use —
+>   [download `Clock_2.32-release.apk`](https://github.com/marvin1099/Clock/releases/latest/download/Clock_2.32-release.apk).
+> - **Nightly:** Experimental build with the latest changes, may be unstable — see the
+>   [Releases page](https://github.com/marvin1099/Clock/releases) (on Obtainium, enable _"Include prereleases"_).
+> - **Debug:** Developer-oriented build with extra logging and diagnostics —
+>   [download `Clock_2.32-debug.apk`](https://github.com/marvin1099/Clock/releases/latest/download/Clock_2.32-debug.apk).
 >
 > All variants (Release, Nightly, Debug) can be installed side by side without conflict.
+> Looking for the **unmodified** Clock app? It is kept on the
+> [`original`](https://github.com/marvin1099/Clock/tree/original) branch.
 
 # ✨ Features
 
