@@ -40,11 +40,11 @@ The unmodified upstream project stays available on the
 > [!NOTE]  
 > **Build variants** (Release, Nightly, and Debug are published with every release):
 > - **Release:** Stable build for everyday use —
->   [download `Clock_2.32-release.apk`](https://github.com/marvin1099/Clock/releases/latest/download/Clock_2.32-release.apk).
+>   on the page grab [`Clock_*.*-release.apk`](https://github.com/marvin1099/Clock/releases/latest/download/).
 > - **Nightly:** Experimental build with the latest changes, may be unstable — see the
 >   [Releases page](https://github.com/marvin1099/Clock/releases) (on Obtainium, enable _"Include prereleases"_).
 > - **Debug:** Developer-oriented build with extra logging and diagnostics —
->   [download `Clock_2.32-debug.apk`](https://github.com/marvin1099/Clock/releases/latest/download/Clock_2.32-debug.apk).
+>   on the page grab [`Clock_*.*-debug.apk`](https://github.com/marvin1099/Clock/releases/latest/download/).
 >
 > All variants (Release, Nightly, Debug) can be installed side by side without conflict.
 > Looking for the **unmodified** Clock app? It is kept on the
