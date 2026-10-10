@@ -367,11 +367,16 @@ class ClockDatabaseHelper extends SQLiteOpenHelper {
             LogUtils.i("combinedDays column added.");
         }
 
-        // Some preview installs advanced the version despite missing the lock column.
+        // Fork releases 2.32/2.33 and the old multi-date preview releases used schema version
+        // 28 without adding the upstream lock column (also added upstream at v28). Their
+        // upgrades skipped the oldVersion < 28 branch above, and installs that already hit
+        // the no-such-column crash have a later version with the column still missing — so
+        // add it whenever it is absent, regardless of the version number.
         if (!columnExists(db, ALARMS_TABLE_NAME, ClockContract.AlarmsColumns.LOCK)) {
-            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " +
-                ClockContract.AlarmsColumns.LOCK + " INTEGER NOT NULL DEFAULT 0;");
-            LogUtils.i("lock column repaired.");
+            db.execSQL("ALTER TABLE " + ALARMS_TABLE_NAME + " ADD COLUMN " + ClockContract.AlarmsColumns.LOCK
+                + " INTEGER NOT NULL DEFAULT 0;");
+
+            LogUtils.i("lock column repaired (was missing despite prior upgrade).");
         }
     }
 
