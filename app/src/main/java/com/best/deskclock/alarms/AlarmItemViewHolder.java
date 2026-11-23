@@ -118,7 +118,6 @@ public class AlarmItemViewHolder extends RecyclerView.ViewHolder {
     public void applySettings() {
         UiConfig.Fonts currentFonts = mAdapter.getFonts();
 
-        mBinding.upcomingDate.setTypeface(currentFonts.general());
         mBinding.preemptiveDismissButton.setTypeface(currentFonts.bold());
     }
 

@@ -697,7 +697,6 @@ public class AlarmEditBottomSheetFragment extends BottomSheetDialogFragment {
             mBinding.scheduleAlarmLayout.setVisibility(GONE);
             mBinding.scheduleAlarmLayout.setOnClickListener(null);
             mBinding.inlineCalendarContainer.getRoot().setVisibility(GONE);
-            mBinding.cancelScheduledAlarm.setOnClickListener(null);
             return;
         }
 
